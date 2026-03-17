@@ -1,0 +1,20 @@
+{
+  "name": "slatekeep",
+  "account_id": "7601a93e6b0ec91b80b29174824d8e43",
+  "main": "src/worker/index.ts",
+  "compatibility_date": "2025-03-14",
+  "assets": {
+    "directory": "./dist"
+  },
+  "routes": [
+    { "pattern": "slatekeep.com", "custom_domain": true },
+    { "pattern": "www.slatekeep.com", "custom_domain": true }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "slatekeep-db",
+      "database_id": "5fb89ff1-a6ae-461c-b1ce-402953d87494"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "slatekeep",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "build": "vite build",
+    "deploy": "vite build && wrangler deploy",
+    "migrate:local": "wrangler d1 execute slatekeep-db --local --file=migrations/0001_initial.sql",
+    "migrate:remote": "wrangler d1 execute slatekeep-db --remote --file=migrations/0001_initial.sql"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-markdown": "^9.0.3",
+    "react-router-dom": "^7.1.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250313.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.2.0",
+    "wrangler": "^4.4.0"
+  }
+}
